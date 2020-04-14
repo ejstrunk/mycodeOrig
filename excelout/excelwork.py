@@ -9,8 +9,8 @@ import pyexcel
 # Request data from user
 def get_ip_data():
     input_host = input("\nWhat is the hostname of the computer? ")
-    input_user = input("\nWhat is the current username? ")
-    input_ip = input("\nWhat is the IP address? ")
+    input_user = input("What is the current username? ")
+    input_ip = input("What is the IP address? ")
     input_driver = input("What is the driver associated with this device? ")
     d = {"Hostname": input_host, "User": input_user, "IP": input_ip, "Driver": input_driver}
     return d
@@ -32,8 +32,25 @@ while(True):
     if (keep_going.lower() == 'q'):
         break
 
-filename = input("\nWhat is the name of the *.xls file? ")
+while(True):
+    addmake = input("\nWould you like to (a)ppend an existing file or (c)reate a new file?")
 
-pyexcel.save_as(records=mylistdict, dest_file_name=f'{filename}.xls')
+    if addmake.lower() == "c":
+        filename = input("\nWhat is the name of the *.xls file? ")
+        pyexcel.save_as(records=mylistdict, dest_file_name=f'{filename}.xls')
+        print("The file " + filename + ".xls should be in your local directory")
+        break
 
-print("The file " + filename + ".xls should be in your local directory")
+    elif addmake.lower() == "a":
+        filename = input("\nWhat is the name of the file you would like to append?")
+        try:
+            sheet = pyexcel.get_sheet()
+            sheet.row += mylistdict
+            sheet.save_as("excelappendtest.xls")
+        except:
+            print("\nFilename was not found. Please enter an existing file within the current directory.")
+            continue
+
+    else:
+        print("Not a valid choice. Please type in a for append or c for create")
+        continue
