@@ -108,7 +108,7 @@ def options():
         else: 
             print("Please select a valid search method")
     while again != "q":
-        again = input("Continue this method of research, return to scouring the book, or restart?\n>").lower()
+        again = input("\n==========================================================================\nContinue this method of research, return to scouring the book, or restart?\n>").lower()
         if again == "q":
             sys.exit("Had a Blast! See You Next Time!")
         elif again in ["research", "this method", "this method of research", "continue this method of research"]:
@@ -123,7 +123,7 @@ def options():
 def book():  # function for basic lists of ingredients and effects
     init_choice = " "
     while init_choice != "q":
-        init_choice = input("Would you like to view all ingredients or search by effect?\n>").lower()
+        init_choice = input("\n\nWould you like to view all ingredients or search by effect?\n>").lower()
         if init_choice == "q":
             sys.exit("See you later!")
         elif init_choice in ["all", "view all", "ingredients", "view all ingredients"]:
@@ -131,12 +131,12 @@ def book():  # function for basic lists of ingredients and effects
         elif init_choice in ["effect", "effects", "search by effect"]:
             eff = " "
             while eff != "Q":
-                eff = input('In what effect are you interested?\n>').title()
+                eff = input('\n\nIn what effect are you interested?\n>').title()
                 if eff == "Q":
                     sys.exit("Have a Great Day!")
                 else:
                     if eff in pos_effects:
-                        print(f"Ingredients containing the {eff} effect are as follows\n======================================================\n")
+                        print(f"\n\nIngredients containing the {eff} effect are as follows\n==================================================================\n")
                         eff_rows = []
                         for i in range(1,len(ingredients_csv)):
                             if eff in ingredients_csv.row[i]:
@@ -144,6 +144,7 @@ def book():  # function for basic lists of ingredients and effects
                         eff_rows = list(set(eff_rows))
                         for i in eff_rows:
                             print('\n' + ingredients_csv.row[i][0] + '\n')
+                        print("==================================================================")
                         again = input("\nWould you like to continue?\n>").lower()
                         if again in ["yes", "y","yep", "yup", "yah"]:
                             book()
