@@ -1,0 +1,55 @@
+Fortify Block
+Fortify Marksman
+Restore Stamina
+Ravage Stamina
+Fortify Carry Weight
+Lingering Damage Health
+Fortify Two-handed
+Invisibility
+Regenerate Health
+Fear
+Slow
+Ravage Magicka
+Fortify Restoration
+Fortify Barter
+Fortify Destruction
+Resist Poison
+Cure Disease
+Damage Stamina Regen
+Damage Stamina
+Weakness To Fire
+Regenerate Magicka
+Fortify Alteration
+Frenzy
+Weakness To Shock
+Weakness To Magic
+Damage Magicka Regen
+Resist Magic
+Fortify Health
+Lingering Damage Stamina
+Fortify Light Armor
+Fortify Heavy Armor
+Resist Fire
+Damage Health
+Restore Health
+Fortify Lockpicking
+Fortify Sneak
+Fortify Stamina
+Damage Magicka
+Waterbreathing
+Fortify Illusion
+Weakness To Poison
+Restore Magicka
+Regenerate Stamina
+Fortify Pickpocket
+Resist Frost
+Fortify One-handed
+Fortify Conjuration
+Weakness To Frost
+Ravage Health
+Fortify Enchanting
+Resist Shock
+Fortify Smithing
+Lingering Damage Magicka
+Fortify Magicka
+Paralysis
