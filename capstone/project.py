@@ -126,9 +126,9 @@ def book():  # function for basic lists of ingredients and effects
         init_choice = input("\n\nWould you like to view all ingredients or search by effect?\n>").lower()
         if init_choice == "q":
             sys.exit("See you later!")
-        elif init_choice in ["all", "view all", "ingredients", "view all ingredients"]:
+        elif init_choice in ["all", "view all", "ingredients", "all ingredients", "view all ingredients"]:
             options()
-        elif init_choice in ["effect", "effects", "search by effect"]:
+        elif init_choice in ["effect", "effects", "search by effect", "search by effects"]:
             eff = " "
             while eff != "Q":
                 eff = input('\n\nIn what effect are you interested?\n>').title()
