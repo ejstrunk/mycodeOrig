@@ -66,7 +66,7 @@ def view_value():
         print("%s: %s" % (item[0], item[7]))
 
 def options():
-    choice = input(">")
+    choice = input()
     if choice == "all":
         view_all()
     elif choice == "id":
@@ -84,19 +84,7 @@ def options():
     elif choice == "value":
         view_value()
 
-init_choice = input("Would you like to view all ingredients by specific values?\n>").lower()
+init_choice = input("Would you like to view all ingredients by specific values? ")
 
 if init_choice == "yes":
     options()
-elif init_choice == "no":
-    print('hi')
-    eff = input('In what effect are you interested?')
-    eff_rows = []
-    for i in range(1,len(ingredients_csv)):
-        #for name in ingredients_csv[i].keys():
-        if eff in ingredients_csv.row[i]:
-            eff_rows.append(i)
-    eff_rows = list(set(eff_rows))
-    for i in eff_rows:
-        print(ingredients_csv.row[i][0] + '\n')
-
